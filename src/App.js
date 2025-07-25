@@ -5,6 +5,7 @@ import { scheduleTasks } from "./utils/scheduler";
 import { saveData, loadData } from "./utils/storage";
 import { requestNotificationPermission, sendTaskNotification } from "./utils/notifications";
 import { gapi } from "gapi-script";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 console.log("Google Client ID:", clientId);
@@ -221,6 +222,7 @@ function App() {
       >
         Test Notifications
       </button>
+      <SpeedInsights />
     </div>
   );
 }
